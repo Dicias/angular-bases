@@ -1,0 +1,16 @@
+<h1>Dbz component</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <dbz-list [characterList]="characters" (onDelete)="onDeleteCharacter($event)" ></dbz-list>
+  </div>
+
+  <div class="col">
+    <!-- Aquí colocas el evento creado con el decorador del @Output(); -->
+    <!-- El evento (onNewCharacter) manda a llamar al método "onNewCharacter" definido en el main -->
+    <!-- Método que recíbe un parametro de tipo Character ("$event" es el valor que retorna el evento ) -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" ></dbz-add-character>
+  </div>
+
+</div>
